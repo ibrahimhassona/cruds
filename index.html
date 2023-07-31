@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees CRUDS Project</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Head -->
+        <div class="head">
+            <h2>Employees Management</h2>
+            <p>This App can help you to know your employees In your small company</p>
+        </div>
+        <!-- Inputs -->
+        <div class="inputs">
+            <input type="text" name="name" id="name" placeholder="Full Name">
+            <div class="section">
+                <input type="number" name="id" id="id" placeholder="National Id">
+                <input type="tel" name="mobile" id="mobile" placeholder="Mobile Number">
+            </div>
+            <div class="section">
+                <select name="position" id="position" >
+                    <option value="" disabled selected hidden>Position</option>
+                    <option value="Frontend Web Developer">Frontend Web Developer</option>
+                    <option value="Backend Web Developer">Backend Web Developer</option>
+                    <option value="DB Developer">DB Developer</option>
+                    <option value="Full Stack Web Developer">Full Stack Web Developer</option>
+                    <option value="Desktop Developer">Desktop Developer</option>
+                    <option value="Mobile Apps Developer">Mobile Apps Developer</option>
+                </select>
+                <select name="dpt" id="dpt" >
+                    <option value="" disabled selected hidden>Department</option>
+                    <option value="Web">Web</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Networks">Networks</option>
+                    <option value="AI">AI</option>
+                </select>
+            </div>
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="search" onkeyup=search(this.value) name="search" id="search" placeholder="Search About Employees">
+            </div>
+            <div class="section">
+                <input type="date" name="date" id="date">
+                <input type="file" name="img" id="img">
+            </div>
+            <input type="button"  id="add" value="Add">
+        </div>
+        <!-- OutPuts -->
+        <div class="outputs">
+            <table>
+                <thead>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>National ID</th>
+                    <th>P.Numbers</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                    <th>Starting Date</th>
+                    <th>Personal Photo</th>
+                    <th>Update</th>
+                    <th>Remove</th>
+                </thead>
+                <tbody>
+                   <!-- Will Added By Js -->
+                </tbody>
+            </table>
+            <!-- removed items -->
+            <div class="removed">
+                <div class="removed-head">
+                    <h3>Resent Removed</h3>
+                    <i class="fas fa-chevron-down shrink"></i>
+                </div>
+                <table>
+                    <thead>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>National ID</th>
+                        <th>P.Numbers</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Starting Date</th>
+                        <th>Personal Photo</th>
+                        <th>Recovery</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody class="removed-list">
+                       <!-- Will Added By Js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="popup">
+        <i class="fas fa-bell"></i>
+        <p>Please compleate the data for the new employee ! </p>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
